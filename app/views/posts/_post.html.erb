@@ -1,0 +1,39 @@
+<div id="<%= dom_id post %>">
+  <p>
+    <strong>Title:</strong>
+    <%= post.title %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= post.content %>
+  </p>
+
+  <p>
+    <strong>Tag:</strong>
+    <%= post.tag %>
+  </p>
+
+  <p>
+    <strong>Category:</strong>
+    <%= post.category %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= post.user_id %>
+  </p>
+
+  <strong>Disponible en físico:</strong>
+  <p><%=post.status%></p>
+
+  <p>
+    <strong>Comments:</strong>
+    <% post.comments.each do |comment| %>
+    <p>
+      <Strong><%=comment.title%></Strong>
+      <p><%=comment.content%></p>
+    </p>
+    <% end %>
+  </p>
+</div>
